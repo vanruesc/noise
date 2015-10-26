@@ -60,5 +60,5 @@ noise -w 1920 -h 1080 -p 0 -o myTexture
 
 ## License
 
-Copyright (c) 2015 Raoul van Rueschen  
+Copyright (c) 2015 Raoul van Rüschen  
 Licensed under the Zlib license.

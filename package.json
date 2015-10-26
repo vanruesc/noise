@@ -21,7 +21,7 @@
 	],
 
 	"author": {
-		"name": "Raoul van Rueschen",
+		"name": "Raoul van Rüschen",
 		"email": "vanruesc@outlook.de"
 	},
 
@@ -55,7 +55,7 @@
 	},
 
 	"engines": {
-		"node": ">= 0.10.0"
+		"node": ">= 0.12.0"
 	},
 
 	"dependencies": {
