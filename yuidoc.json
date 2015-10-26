@@ -1,7 +1,7 @@
 {
 	"name": "Noise API",
 	"description": "A 2D noise texture generator.",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"url": "https://github.com/vanruesc/noise",
 	"options": {
 		"outdir": "docs"

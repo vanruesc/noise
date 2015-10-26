@@ -10,7 +10,7 @@ A 2d noise texture generator that implements bilinear smoothing and turbulence.
 ## Installation
 
 ```javascript
-npm install --save-dev @zayesh/noise
+npm install @zayesh/noise
 ``` 
 
 
@@ -18,7 +18,7 @@ npm install --save-dev @zayesh/noise
 
 ```sh
 # CLI for jpg images:
-node bin/noise -w 1920 -h 1080 -p 0 -o myTexture
+noise -w 1920 -h 1080 -p 0 -o myTexture
 
 # The generated file will be stored in the output folder.
 ```
