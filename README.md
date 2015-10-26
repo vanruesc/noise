@@ -2,6 +2,7 @@
 [![Build status](https://travis-ci.org/vanruesc/noise.svg?branch=master)](https://travis-ci.org/vanruesc/noise) 
 [![Windows build status](https://ci.appveyor.com/api/projects/status/1vnesrjt9xcvs9y2?svg=true)](https://ci.appveyor.com/project/vanruesc/noise) 
 [![GitHub version](https://badge.fury.io/gh/vanruesc%2Fnoise.svg)](http://badge.fury.io/gh/vanruesc%2Fnoise) 
+[![npm version](https://badge.fury.io/js/%40zayesh%2Fnoise.svg)](http://badge.fury.io/js/%40zayesh%2Fnoise) 
 [![Dependencies](https://david-dm.org/vanruesc/noise.svg?branch=master)](https://david-dm.org/vanruesc/noise)
 
 A 2d noise texture generator that implements bilinear smoothing and turbulence.
@@ -9,16 +10,23 @@ A 2d noise texture generator that implements bilinear smoothing and turbulence.
 
 ## Installation
 
-```javascript
-npm install --save-dev @zayesh/noise
+```sh
+$ npm install @zayesh/noise
 ``` 
 
 
 ## Usage
 
+```javascript
+import Noise from "@zayesh/noise";
+
+var noise = new Noise(800, 600);
+var data = noise.generate();
+```
+
 ```sh
-# CLI for jpg images:
-node bin/noise -w 1920 -h 1080 -p 0 -o myTexture
+# CLI when used in an npm script
+noise -w 1920 -h 1080 -p 0 -o myTexture
 
 # The generated file will be stored in the output folder.
 ```
@@ -27,19 +35,12 @@ node bin/noise -w 1920 -h 1080 -p 0 -o myTexture
   Optional arguments:
     -w      Width, Number.
     -h      Height, Number.
-    -p      Pattern, See the docs for more infos.
+    -p      Pattern, Number (0, 1, 2).
     -a      Turbulence power, Number.
     -b      Turbulence size, Number.
     -c      Repetition x, Number.
     -d      Repetition y, Number.
     -n, -o  Name of the output file, String.
-```
-
-```javascript
-import Noise from "@zayesh/noise";
-
-var noise = new Noise(800, 600);
-var data = noise.generate();
 ```
 
 
