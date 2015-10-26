@@ -45,9 +45,9 @@ var data = noise.generate();
 
 ## Examples
 
-![Clouds](http://vanruesc.github.io/noise/clouds.jpg)
-![Marble](http://vanruesc.github.io/noise/marble.jpg)
-![Wood](http://vanruesc.github.io/noise/wood.jpg)
+![Clouds](http://vanruesc.github.io/noise/output/clouds.jpg)
+![Marble](http://vanruesc.github.io/noise/output/marble.jpg)
+![Wood](http://vanruesc.github.io/noise/output/wood.jpg)
 
 
 ## Documentation
