@@ -1,0 +1,235 @@
+{
+    "project": {
+        "name": "Noise API",
+        "description": "A 2D noise texture generator.",
+        "version": "0.0.0",
+        "url": "https://github.com/vanruesc/noise"
+    },
+    "files": {
+        "src\\color-converter.js": {
+            "name": "src\\color-converter.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src\\noise.js": {
+            "name": "src\\noise.js",
+            "modules": {},
+            "classes": {
+                "Noise": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Noise": {
+            "name": "Noise",
+            "shortname": "Noise",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "src\\noise.js",
+            "line": 18,
+            "description": "A Noise Generator.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "width",
+                    "description": "- The image width.",
+                    "type": "Number"
+                },
+                {
+                    "name": "height",
+                    "description": "- The image height.",
+                    "type": "Number"
+                }
+            ]
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "src\\color-converter.js",
+            "line": 1,
+            "description": "Converts an HSL color value to RGB. Conversion formula\nadapted from http://en.wikipedia.org/wiki/HSL_color_space.\nAssumes h, s, and l are contained in the set [0, 1] and\nreturns r, g, and b in the set [0, 255].",
+            "itemtype": "method",
+            "name": "hslToRgb",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "h",
+                    "description": "- The hue.",
+                    "type": "Number"
+                },
+                {
+                    "name": "s",
+                    "description": "- The saturation.",
+                    "type": "Number"
+                },
+                {
+                    "name": "l",
+                    "description": "- The lightness.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The RGB representation.",
+                "type": "Array"
+            },
+            "class": "Noise"
+        },
+        {
+            "file": "src\\noise.js",
+            "line": 3,
+            "description": "Available noise patterns.",
+            "itemtype": "property",
+            "name": "Pattern",
+            "type": "Object",
+            "static": 1,
+            "final": 1,
+            "class": "Noise"
+        },
+        {
+            "file": "src\\noise.js",
+            "line": 31,
+            "description": "The image width.",
+            "itemtype": "property",
+            "name": "width",
+            "type": "Number",
+            "class": "Noise"
+        },
+        {
+            "file": "src\\noise.js",
+            "line": 40,
+            "description": "The image height.",
+            "itemtype": "property",
+            "name": "height",
+            "type": "Number",
+            "class": "Noise"
+        },
+        {
+            "file": "src\\noise.js",
+            "line": 49,
+            "description": "The noise image data.",
+            "itemtype": "property",
+            "name": "noise",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "default": "null",
+            "class": "Noise"
+        },
+        {
+            "file": "src\\noise.js",
+            "line": 72,
+            "description": "The noise image data (RGBA).",
+            "itemtype": "property",
+            "name": "imageData",
+            "type": "Uint8ClampedArray",
+            "class": "Noise"
+        },
+        {
+            "file": "src\\noise.js",
+            "line": 83,
+            "description": "Smoothes the noise data.",
+            "itemtype": "method",
+            "name": "smooth",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "- X coordinate in noise data.",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "- Y coordinate in noise data.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The smoothed noise value at xy.",
+                "type": "Number"
+            },
+            "class": "Noise"
+        },
+        {
+            "file": "src\\noise.js",
+            "line": 118,
+            "description": "Creates turbulences on the noise data.",
+            "itemtype": "method",
+            "name": "turbulence",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "- X coordinate in noise data.",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "- Y coordinate in noise data.",
+                    "type": "Number"
+                },
+                {
+                    "name": "size",
+                    "description": "- Turbulence size.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The turbulence noise value for xy.",
+                "type": "Number"
+            },
+            "class": "Noise"
+        },
+        {
+            "file": "src\\noise.js",
+            "line": 144,
+            "description": "Generates noise image data.",
+            "itemtype": "method",
+            "name": "generate",
+            "params": [
+                {
+                    "name": "pattern",
+                    "description": "- The pattern.",
+                    "type": "Pattern"
+                },
+                {
+                    "name": "turbPower",
+                    "description": "- Intensity of the twists. 0 creates a normal sine pattern.",
+                    "type": "Number"
+                },
+                {
+                    "name": "turbSize",
+                    "description": "- Initial size of the turbulence.",
+                    "type": "Number"
+                },
+                {
+                    "name": "period0",
+                    "description": "- Repetition of marble lines in x direction. Only relevant for the marble and wood patterns.",
+                    "type": "Number"
+                },
+                {
+                    "name": "period1",
+                    "description": "- Repetition of marble lines in y direction. Only relevant for the marble pattern.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The generated image data.",
+                "type": "Uint8ClampedArray"
+            },
+            "class": "Noise"
+        }
+    ],
+    "warnings": []
+}

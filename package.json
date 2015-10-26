@@ -1,0 +1,74 @@
+{
+	"name": "@zayesh/noise",
+	"version": "0.0.0",
+	"description": "A 2D noise texture generator.",
+	"homepage": "https://github.com/vanruesc/noise",
+	"main": "build/noise",
+	"jsnext:main": "src/noise",
+	"license": "Zlib",
+
+	"bin": {
+		"noise": "bin/noise.js"
+	},
+
+	"keywords": [
+		"noise",
+		"2D",
+		"texture",
+		"bilinear",
+		"smoothing",
+		"turbulence"
+	],
+
+	"author": {
+		"name": "Raoul van Rueschen",
+		"email": "vanruesc@outlook.de"
+	},
+
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vanruesc/noise.git"
+	},
+
+	"bugs": {
+		"url": "https://github.com/vanruesc/noise/issues"
+	},
+
+	"scripts": {
+
+		"jshint:test": "jshint test",
+		"jshint:lib": "jshint src",
+		"jshint": "npm run jshint:test && npm run jshint:lib",
+
+		"rollup": "rollup -f cjs -n Noise -i src/noise.js -o build/noise.js",
+		"uglify": "uglifyjs build/noise.js -c -m -o build/noise.min.js",
+
+		"mocha": "mocha test",
+		"yuidoc": "yuidoc src -q -c yuidoc.json",
+
+		"prebuild": "npm run jshint",
+		"build": "npm run rollup && npm run uglify",
+		"postbuild": "node banner.js",
+		"pretest": "npm run build",
+		"test": "npm run mocha"
+
+	},
+
+	"engines": {
+		"node": ">= 0.10.0"
+	},
+
+	"dependencies": {
+		"jpeg-js": "0.1.x",
+		"minimist": "1.2.x"
+	},
+
+	"devDependencies": {
+		"jshint": "2.x.x",
+		"mocha": "2.x.x",
+		"prepend-file": "1.x.x",
+		"rollup": "0.x.x",
+		"uglify-js": "2.x.x",
+		"yuidocjs": "0.x.x"
+	}
+}
