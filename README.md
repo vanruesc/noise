@@ -2,6 +2,7 @@
 [![Build status](https://travis-ci.org/vanruesc/noise.svg?branch=master)](https://travis-ci.org/vanruesc/noise) 
 [![Windows build status](https://ci.appveyor.com/api/projects/status/1vnesrjt9xcvs9y2?svg=true)](https://ci.appveyor.com/project/vanruesc/noise) 
 [![GitHub version](https://badge.fury.io/gh/vanruesc%2Fnoise.svg)](http://badge.fury.io/gh/vanruesc%2Fnoise) 
+[![npm version](https://badge.fury.io/js/%40zayesh%2Fnoise.svg)](http://badge.fury.io/js/%40zayesh%2Fnoise) 
 [![Dependencies](https://david-dm.org/vanruesc/noise.svg?branch=master)](https://david-dm.org/vanruesc/noise)
 
 A 2d noise texture generator that implements bilinear smoothing and turbulence.
