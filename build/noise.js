@@ -11,8 +11,8 @@
  * Assumes h, s, and l are contained in the set [0, 1] and
  * returns r, g, and b in the set [0, 255].
  *
- * @class Noise
  * @method hslToRgb
+ * @private
  * @param {Number} h - The hue.
  * @param {Number} s - The saturation.
  * @param {Number} l - The lightness.
@@ -219,12 +219,11 @@ Noise.prototype.turbulence = function(x, y, size) {
  * Generates noise image data.
  *
  * @method generate
- * @private
  * @param {Pattern} pattern - The pattern.
  * @param {Number} turbPower - Intensity of the twists. 0 creates a normal sine pattern.
  * @param {Number} turbSize - Initial size of the turbulence.
- * @param {Number} period0 - Repetition of marble lines in x direction.
- * @param {Number} period1 - Repetition of marble lines in y direction.
+ * @param {Number} period0 - Repetition of marble lines in x direction. Only relevant for the marble and wood patterns.
+ * @param {Number} period1 - Repetition of marble lines in y direction. Only relevant for the marble pattern.
  * @return {Uint8ClampedArray} The generated image data.
  */
 

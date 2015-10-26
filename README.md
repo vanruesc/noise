@@ -39,8 +39,7 @@ node bin/noise -w 1920 -h 1080 -p 0 -o myTexture
 import Noise from "@zayesh/noise";
 
 var noise = new Noise(800, 600);
-
-noise.generate();
+var data = noise.generate();
 ```
 
 
