@@ -5,10 +5,12 @@
 [![npm version](https://badge.fury.io/js/%40zayesh%2Fnoise.svg)](http://badge.fury.io/js/%40zayesh%2Fnoise) 
 [![Dependencies](https://david-dm.org/vanruesc/noise.svg?branch=master)](https://david-dm.org/vanruesc/noise)
 
-A 2d noise texture generator that implements bilinear smoothing and turbulence.
+A 2D noise texture generator that implements bilinear smoothing and turbulence.
 
 
 ## Installation
+
+This module can be installed from [npm](https://www.npmjs.com).
 
 ```sh
 $ npm install @zayesh/noise
@@ -25,7 +27,7 @@ var data = noise.generate();
 ```
 
 ```sh
-# CLI when used in an npm script
+# CLI when used in an npm script.
 noise -w 1920 -h 1080 -p 0 -o myTexture
 
 # The generated file will be stored in the output folder.
@@ -58,5 +60,5 @@ noise -w 1920 -h 1080 -p 0 -o myTexture
 
 ## License
 
-Copyright (c) 2015 Raoul van Rüschen  
+Copyright (c) 2015 Raoul van Rueschen  
 Licensed under the Zlib license.
