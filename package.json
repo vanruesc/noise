@@ -1,6 +1,6 @@
 {
 	"name": "@zayesh/noise",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A 2D noise texture generator.",
 	"homepage": "https://github.com/vanruesc/noise",
 	"main": "build/noise",

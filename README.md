@@ -10,15 +10,22 @@ A 2d noise texture generator that implements bilinear smoothing and turbulence.
 
 ## Installation
 
-```javascript
-npm install @zayesh/noise
+```sh
+$ npm install @zayesh/noise
 ``` 
 
 
 ## Usage
 
+```javascript
+import Noise from "@zayesh/noise";
+
+var noise = new Noise(800, 600);
+var data = noise.generate();
+```
+
 ```sh
-# CLI for jpg images:
+# CLI when used in an npm script
 noise -w 1920 -h 1080 -p 0 -o myTexture
 
 # The generated file will be stored in the output folder.
@@ -28,19 +35,12 @@ noise -w 1920 -h 1080 -p 0 -o myTexture
   Optional arguments:
     -w      Width, Number.
     -h      Height, Number.
-    -p      Pattern, See the docs for more infos.
+    -p      Pattern, Number (0, 1, 2).
     -a      Turbulence power, Number.
     -b      Turbulence size, Number.
     -c      Repetition x, Number.
     -d      Repetition y, Number.
     -n, -o  Name of the output file, String.
-```
-
-```javascript
-import Noise from "@zayesh/noise";
-
-var noise = new Noise(800, 600);
-var data = noise.generate();
 ```
 
 

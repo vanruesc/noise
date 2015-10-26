@@ -1,5 +1,5 @@
 /**
- * noise v0.0.1 build Oct 26 2015
+ * noise v0.0.2 build Oct 26 2015
  * https://github.com/vanruesc/noise
  * Copyright 2015 Raoul van Rueschen, Zlib
  */
