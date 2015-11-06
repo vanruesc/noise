@@ -1,6 +1,6 @@
 {
-	"name": "@zayesh/noise",
-	"version": "0.0.2",
+	"name": "@vanruesc/noise",
+	"version": "0.0.3",
 	"description": "A 2D noise texture generator.",
 	"homepage": "https://github.com/vanruesc/noise",
 	"main": "build/noise",
@@ -48,7 +48,7 @@
 
 		"prebuild": "npm run jshint",
 		"build": "npm run rollup && npm run uglify",
-		"postbuild": "node banner.js",
+		"postbuild": "node banner.js && mkdirp output",
 		"pretest": "npm run build",
 		"test": "npm run mocha"
 
@@ -60,11 +60,12 @@
 
 	"dependencies": {
 		"jpeg-js": "0.1.x",
-		"minimist": "1.2.x"
+		"minimist": "1.x.x"
 	},
 
 	"devDependencies": {
 		"jshint": "2.x.x",
+		"mkdirp": "0.x.x",
 		"mocha": "2.x.x",
 		"prepend-file": "1.x.x",
 		"rollup": "0.x.x",
